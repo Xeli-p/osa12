@@ -1,0 +1,9 @@
+services:
+  app:
+    image: todo-frontend
+    build:
+      context: . # The context will pick this directory as the "build context"
+      dockerfile: Dockerfile # This will simply tell which dockerfile to 
+    ports:
+      - 5173:80
+    container_name: todo-frontend # This will name the container hello-front-dev

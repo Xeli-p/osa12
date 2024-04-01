@@ -1,0 +1,11 @@
+services:
+  server:                    # The name of the service, can be anything
+    image: phonebook-backend-dev  # Declares which image to use
+    volumes:
+      - ./:/usr/src/app
+    build: 
+      context: .
+      dockerfile: dev.Dockerfile
+    ports:                # Declares the ports to publish
+      - 3001:3001
+
